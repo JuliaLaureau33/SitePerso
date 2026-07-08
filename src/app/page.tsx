@@ -71,7 +71,7 @@ export default function Home() {
         </div>
 
         <div className="offrandes-grid">
-          <div className="offrande-card">
+          <a href="https://sosshine.com" target="_blank" rel="noopener noreferrer" className="offrande-card">
             <div className="offrande-number">I · POUR LES ADULTES</div>
             <h3>SOS Shine<em>®</em></h3>
             <p>
@@ -79,10 +79,10 @@ export default function Home() {
               celles et ceux qui cherchent à se libérer de ce qui n&apos;est pas eux, et à
               retrouver leur signature intérieure.
             </p>
-            <a href="https://sosshine.com" target="_blank" rel="noopener noreferrer" className="card-link">
+            <span className="card-link">
               Entrer dans cet espace
-            </a>
-          </div>
+            </span>
+          </a>
 
           <div className="offrande-card">
             <div className="offrande-number">II · POUR LES ENFANTS</div>

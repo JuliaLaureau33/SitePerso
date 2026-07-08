@@ -504,6 +504,9 @@ nav {
 }
 
 .offrande-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   background: rgba(30, 27, 23, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
