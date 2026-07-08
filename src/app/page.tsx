@@ -79,7 +79,7 @@ export default function Home() {
               celles et ceux qui cherchent à se libérer de ce qui n&apos;est pas eux, et à
               retrouver leur signature intérieure.
             </p>
-            <a href="https://sos-shine-platform.vercel.app" target="_blank" rel="noopener noreferrer" className="card-link">
+            <a href="https://sosshine.com" target="_blank" rel="noopener noreferrer" className="card-link">
               Entrer dans cet espace
             </a>
           </div>
