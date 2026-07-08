@@ -238,6 +238,16 @@ nav {
   }
 }
 
+.hero-intro {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 500px;
+  margin-bottom: 28px;
+}
+
 .hero-signature {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
@@ -1427,6 +1437,7 @@ nav {
   .hero-tagline::before { width: 30px !important; }
   .hero-name .last { margin-left: 30px !important; }
   .hero-name { font-size: 48px; margin-bottom: 16px; text-align: left; }
+  .hero-intro { font-size: 16px; margin: 0 0 18px 0; text-align: left; max-width: 100%; }
   .hero-signature { font-size: 17px; margin: 0 0 20px 0; text-align: left; max-width: 100%; }
   .hero-cta { flex-direction: row !important; justify-content: flex-start; gap: 16px; }
 }

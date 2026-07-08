@@ -36,6 +36,11 @@ export default function Home() {
             </span>
           </h1>
 
+          <p className="hero-intro">
+            J&apos;aide les adultes, les enfants et les thérapeutes à comprendre leurs
+            conditionnements afin de transformer durablement leur vie émotionnelle.
+          </p>
+
           <p className="hero-signature">
             Se retrouver soi-même est le travail d&apos;une vie. Le <em>silence</em> en est le chemin.
           </p>
