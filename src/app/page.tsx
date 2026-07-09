@@ -1,9 +1,14 @@
 import SiteHeader from "./SiteHeader";
+import RevealOnScroll from "./RevealOnScroll";
+import WaitlistForm from "./WaitlistForm";
 
 export default function Home() {
+  const decondWord = "Déconditionnement";
+
   return (
     <>
       <SiteHeader />
+      <RevealOnScroll />
 
       {/* HERO */}
       <section className="hero">
@@ -81,95 +86,275 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MES OFFRANDES */}
-      <section className="offrandes" id="offrandes">
-        <div className="offrandes-header">
-          <div className="section-label">Mes offrandes</div>
-          <h2 className="offrandes-title">
-            Ce que je <em>dépose</em> au monde
+      {/* MANIFESTE */}
+      <section className="manifeste">
+        <div className="manifeste-inner">
+          <p className="manifeste-line" data-reveal>
+            Nous ne voyons pas le monde tel qu’il est.
+          </p>
+          <p className="manifeste-line" data-reveal style={{ "--reveal-delay": "0.5s" } as React.CSSProperties}>
+            Nous le voyons à travers notre histoire.
+          </p>
+          <p className="manifeste-line manifeste-gold" data-reveal style={{ "--reveal-delay": "1s" } as React.CSSProperties}>
+            C’est cette histoire que je t’aide à comprendre.
+          </p>
+        </div>
+      </section>
+
+      {/* JULIA / ORIGINE */}
+      <section className="origine" id="origine">
+        <div className="origine-grid">
+          <div className="origine-text" data-reveal>
+            <div className="section-label">L’origine</div>
+            <h2 className="origine-title">
+              Une approche née d’un <em>chemin de vie</em>
+            </h2>
+            <p>
+              Pendant longtemps, j’ai cru que certaines réactions faisaient simplement partie
+              de ma personnalité. Puis j’ai compris qu’elles étaient souvent les traces
+              d’histoires plus anciennes : l’enfance, les loyautés familiales, les blessures,
+              les conditionnements, les silences.
+            </p>
+            <p>Cette compréhension a transformé ma manière de regarder l’être humain.</p>
+            <p>
+              Aujourd’hui, j’explore les mécanismes invisibles qui construisent notre identité
+              afin de rendre leur compréhension accessible au plus grand nombre.
+            </p>
+            <a href="/mon-histoire" className="btn-link origine-cta">Lire mon histoire</a>
+          </div>
+
+          {/* Emplacement image — remplacer le contenu par une <img> ou un background */}
+          <div className="origine-visual" data-reveal style={{ "--reveal-delay": "0.2s" } as React.CSSProperties}>
+            <div className="origine-frame" aria-hidden="true">
+              <span className="origine-monogram">JL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LE DÉCONDITIONNEMENT */}
+      <section className="decond" id="deconditionnement">
+        <div className="decond-inner">
+          <h2 className="decond-title" data-reveal-letters aria-label="Le Déconditionnement">
+            <span className="decond-le" aria-hidden="true">Le </span>
+            {decondWord.split("").map((ch, i) => (
+              <span
+                key={i}
+                className="decond-letter"
+                aria-hidden="true"
+                style={{ "--i": i } as React.CSSProperties}
+              >
+                {ch}
+              </span>
+            ))}
           </h2>
+
+          <p className="decond-subtitle" data-reveal style={{ "--reveal-delay": "0.15s" } as React.CSSProperties}>
+            Comprendre ce qui t’a construit pour choisir ce que tu veux devenir.
+          </p>
+
+          <div className="decond-body" data-reveal style={{ "--reveal-delay": "0.25s" } as React.CSSProperties}>
+            <p>
+              Nous croyons souvent choisir librement nos réactions, nos peurs, nos désirs,
+              nos blocages ou nos relations.
+            </p>
+            <p>
+              Pourtant, une grande partie de notre manière d’aimer, de nous protéger, de
+              réussir, d’échouer ou de nous saboter s’est construite bien avant que nous
+              ayons conscience de nous-mêmes.
+            </p>
+            <p>
+              Le Déconditionnement n’est pas une méthode pour devenir quelqu’un d’autre.
+            </p>
+            <p className="decond-highlight">
+              C’est un chemin pour reconnaître ce qui ne t’appartient plus, et revenir à une
+              forme de liberté intérieure.
+            </p>
+          </div>
+
+          <div className="decond-cta" data-reveal style={{ "--reveal-delay": "0.35s" } as React.CSSProperties}>
+            <a href="#offrandes" className="btn-primary">Découvrir cette approche</a>
+          </div>
+        </div>
+      </section>
+
+      {/* CHOISIR TON CHEMIN */}
+      <section className="offrandes" id="offrandes">
+        <div className="offrandes-header" data-reveal>
+          <div className="section-label">Les espaces créés pour t’accompagner</div>
+          <h2 className="offrandes-title">Choisir ton <em>chemin</em></h2>
           <p className="offrandes-subtitle">
-            Quatre lieux, quatre possibilités. Entre, reste, repars. Selon ce qui résonne aujourd&apos;hui.
+            Chaque espace a été créé pour répondre à un besoin différent, mais tous suivent la
+            même intention : comprendre, libérer, transmettre.
           </p>
         </div>
 
         <div className="offrandes-grid">
-          <a href="https://sosshine.com" target="_blank" rel="noopener noreferrer" className="offrande-card">
+          <a
+            href="https://sosshine.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="offrande-card"
+            data-reveal
+          >
             <div className="offrande-number">I · POUR LES ADULTES</div>
             <h3>SOS Shine<em>®</em></h3>
             <p>
-              Là où je dépose ce que j&apos;ai compris du conditionnement humain. Un espace pour
-              celles et ceux qui cherchent à se libérer de ce qui n&apos;est pas eux, et à
-              retrouver leur signature intérieure.
+              Pour comprendre tes schémas, libérer ce qui se répète et retrouver une relation
+              plus consciente à toi-même, aux autres et à ta vie.
             </p>
-            <span className="card-link">
-              Entrer dans cet espace
-            </span>
+            <span className="card-link">Découvrir SOS Shine</span>
           </a>
 
-          <div className="offrande-card">
+          <a
+            href="https://sosshine.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="offrande-card"
+            data-reveal
+            style={{ "--reveal-delay": "0.1s" } as React.CSSProperties}
+          >
             <div className="offrande-number">II · POUR LES ENFANTS</div>
             <h3>SOS Shine® <em>Kids</em></h3>
             <p>
-              Une plateforme entièrement gratuite pour les enfants et leurs parents. Pour
-              qu&apos;ils apprennent à comprendre leurs émotions avant que la vie ne les
-              enseigne à les taire.
+              Un espace gratuit pour aider les enfants et leurs parents à comprendre les
+              émotions avant que le monde ne leur apprenne à les cacher.
             </p>
-            <a href="https://sosshine.fr" target="_blank" rel="noopener noreferrer" className="card-link">
-              Rejoindre les enfants
-            </a>
-          </div>
+            <span className="card-link">Rejoindre l’espace Kids</span>
+          </a>
 
-          <div className="offrande-card">
-            <div className="offrande-number">III · MES LIVRES</div>
-            <h3>Mes <em>livres</em></h3>
+          <a
+            href="/livres"
+            className="offrande-card"
+            data-reveal
+            style={{ "--reveal-delay": "0.2s" } as React.CSSProperties}
+          >
+            <div className="offrande-number">III · LES LIVRES</div>
+            <h3>SOS Shine® <em>Éditions</em></h3>
             <p>
-              Le Déconditionnement et Supers Pouvoirs. Deux livres comme deux portes ouvertes sur
-              le même chemin, celui du retour à soi. À lire seule, ou ensemble.
+              Des livres pour ouvrir le dialogue, comprendre autrement et transmettre aux
+              enfants une manière plus libre d’habiter leurs émotions.
             </p>
-            <a href="/livres" className="card-link">Lire ensemble</a>
-          </div>
+            <span className="card-link">Découvrir les livres</span>
+          </a>
 
-          <div className="offrande-card">
+          <a
+            href="/contact"
+            className="offrande-card"
+            data-reveal
+            style={{ "--reveal-delay": "0.3s" } as React.CSSProperties}
+          >
             <div className="offrande-number">IV · ACCOMPAGNEMENT</div>
-            <h3>La coach des <em>thérapeutes</em></h3>
+            <h3>Accompagnement <em>privé</em></h3>
             <p>
-              Pour les coachs, thérapeutes et accompagnants qui sentent qu&apos;il leur manque
-              une dimension dans leur pratique. Un accompagnement individuel multidimensionnel,
-              en présence rare.
+              Pour les personnes qui sentent qu’elles ont déjà beaucoup compris, mais qu’un
+              schéma résiste encore. Un accompagnement individuel, profond et entièrement
+              personnalisé.
             </p>
-            <a href="/contact" className="card-link">Me trouver</a>
+            <span className="card-link">Travailler avec moi</span>
+          </a>
+        </div>
+
+        <p className="offrandes-note" data-reveal>
+          J’accompagne aussi bien des particuliers que des thérapeutes et des accompagnants qui
+          souhaitent approfondir leur propre chemin.
+        </p>
+      </section>
+
+      {/* PREUVES / CRÉDIBILITÉ */}
+      <section className="preuves">
+        <div className="preuves-header" data-reveal>
+          <div className="section-label">La démarche</div>
+          <h2 className="preuves-title">Un travail de fond, transmis avec exigence</h2>
+          <p className="preuves-intro">
+            Depuis plusieurs années, Julia Laureau explore les liens entre conditionnement,
+            émotions, inconscient, transmission familiale et liberté intérieure.
+          </p>
+        </div>
+
+        <div className="preuves-grid">
+          <div className="preuve-block" data-reveal>
+            <div className="preuve-key">Des années</div>
+            <p>d’exploration personnelle et professionnelle.</p>
+          </div>
+          <div className="preuve-block" data-reveal style={{ "--reveal-delay": "0.1s" } as React.CSSProperties}>
+            <div className="preuve-key">Un accompagnement</div>
+            <p>individuel, profond et sur mesure.</p>
+          </div>
+          <div className="preuve-block" data-reveal style={{ "--reveal-delay": "0.2s" } as React.CSSProperties}>
+            <div className="preuve-key">Des contenus</div>
+            <p>de transformation : livres et ressources.</p>
+          </div>
+          <div className="preuve-block" data-reveal style={{ "--reveal-delay": "0.3s" } as React.CSSProperties}>
+            <div className="preuve-key">Une vision globale</div>
+            <p>adultes, enfants, familles et transmission.</p>
           </div>
         </div>
       </section>
 
-      {/* CADEAU GRATUIT */}
-      <section className="cadeau-section" id="cadeau">
-        <div className="cadeau-content">
-          <div className="section-label">Mon cadeau</div>
-          <h2 className="cadeau-title">
-            Une <em>offrande</em>, librement
-          </h2>
-          <p className="cadeau-text">
-            J&apos;aime offrir d&apos;abord. Ici, un cadeau sans condition, sans email à laisser,
-            sans rien à acheter. Juste à recevoir, librement.
-          </p>
-          <div className="cadeau-placeholder">
-            ✦ Bientôt déposé ici ✦
-          </div>
+      {/* TÉMOIGNAGES */}
+      <section className="temoignages">
+        <div className="temoignages-header" data-reveal>
+          <div className="section-label">Les retours</div>
+          <h2 className="temoignages-title">Ce qu’ils en disent</h2>
+        </div>
+
+        <div className="temoignages-grid">
+          <figure className="temoignage-card" data-reveal>
+            <blockquote>
+              « J’ai compris en une séance ce que je répétais depuis des années sans le voir. »
+            </blockquote>
+            <figcaption>— Prénom</figcaption>
+          </figure>
+
+          <figure className="temoignage-card" data-reveal style={{ "--reveal-delay": "0.1s" } as React.CSSProperties}>
+            <blockquote>
+              « Julia a cette capacité rare à mettre des mots sur ce qui était confus à
+              l’intérieur. »
+            </blockquote>
+            <figcaption>— Prénom</figcaption>
+          </figure>
+
+          <figure className="temoignage-card" data-reveal style={{ "--reveal-delay": "0.2s" } as React.CSSProperties}>
+            <blockquote>
+              « Je suis repartie avec une compréhension nouvelle de moi-même, mais surtout avec
+              une sensation d’apaisement. »
+            </blockquote>
+            <figcaption>— Prénom</figcaption>
+          </figure>
         </div>
       </section>
 
-      {/* CITATION FINALE */}
-      <section className="citations">
-        <div className="citation">
-          <div className="citation-mark">«</div>
-          <p className="citation-text">
-            Au fur et à mesure que nous laissons briller notre propre lumière, nous donnons
-            inconsciemment aux autres la permission de faire de même.
+      {/* COMMENCER GRATUITEMENT */}
+      <section className="commencer" id="commencer">
+        <div className="commencer-content" data-reveal>
+          <div className="section-label">Entrée libre</div>
+          <h2 className="commencer-title">Commencer <em>gratuitement</em></h2>
+          <p className="commencer-text">
+            Pour entrer doucement dans cet univers, tu peux recevoir une première ressource
+            offerte autour du Déconditionnement et des mécanismes émotionnels.
           </p>
-          <div className="citation-author">Marianne Williamson</div>
-          <div className="signature-33-citation">33</div>
+          <p className="commencer-note">
+            La première ressource offerte arrive bientôt. Laisse ton adresse pour être
+            prévenu(e) dès sa sortie.
+          </p>
+          <WaitlistForm />
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
+      <section className="final-cta">
+        <div className="final-glow" aria-hidden="true"></div>
+        <div className="final-content" data-reveal>
+          <h2 className="final-title">Chaque transformation commence par une rencontre.</h2>
+          <p className="final-text">
+            Avec soi. Avec son histoire. Avec ce qui demande enfin à être vu autrement.
+          </p>
+          <div className="final-buttons">
+            <a href="#offrandes" className="btn-primary">Découvrir mon univers</a>
+            <a href="/contact" className="btn-link">Me contacter</a>
+          </div>
+          <div className="final-signature" aria-hidden="true">33</div>
         </div>
       </section>
     </>

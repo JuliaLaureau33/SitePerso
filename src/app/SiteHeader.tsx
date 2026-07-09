@@ -33,6 +33,7 @@ export default function SiteHeader() {
       </button>
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li><Link href="/mon-histoire" onClick={closeMenu}>Mon histoire</Link></li>
+        <li><Link href="/#deconditionnement" onClick={closeMenu}>Le Déconditionnement</Link></li>
         <li><Link href="/#offrandes" onClick={closeMenu}>Offrandes</Link></li>
         <li><Link href="/contact" onClick={closeMenu}>Contact</Link></li>
       </ul>
