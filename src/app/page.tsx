@@ -7,6 +7,8 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero">
+        <div className="hero-glow" aria-hidden="true"></div>
+
         <div className="hero-content">
           <div className="hero-tagline">Une femme. Un chemin. Une voix.</div>
 
@@ -36,18 +38,34 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="hero-intro">
-            J&apos;aide les adultes, les enfants et les thérapeutes à comprendre leurs
-            conditionnements afin de transformer durablement leur vie émotionnelle.
-          </p>
+          <h2 className="hero-title">
+            <span className="word">Comprendre</span>{" "}
+            <span className="word">ce</span>{" "}
+            <span className="word">qui</span>{" "}
+            <span className="word gold">dirige</span>{" "}
+            <span className="word gold">ta</span>{" "}
+            <span className="word gold">vie</span>{" "}
+            <span className="word">pour</span>{" "}
+            <span className="word">retrouver</span>{" "}
+            <span className="word">ce</span>{" "}
+            <span className="word">qui</span>{" "}
+            <span className="word gold">t’appartient</span>{" "}
+            <span className="word gold">vraiment.</span>
+          </h2>
 
-          <p className="hero-signature">
-            Se retrouver soi-même est le travail d&apos;une vie. Le <em>silence</em> en est le chemin.
+          <p className="hero-lede">
+            Nous passons une grande partie de notre existence à répéter des mécanismes que
+            nous n’avons jamais consciemment choisis. Mon travail consiste à t’aider à les
+            comprendre, puis à t’en libérer.
           </p>
 
           <div className="hero-cta">
-            <a href="#offrandes" className="btn-primary">Entrer</a>
-            <a href="/mon-histoire" className="btn-link">Lire ma voix</a>
+            <a href="#offrandes" className="btn-primary">Découvrir mon univers</a>
+            <a href="/mon-histoire" className="btn-link">Comprendre mon approche</a>
+          </div>
+
+          <div className="hero-keywords" aria-hidden="true">
+            Le Déconditionnement <span>·</span> L’émotionnel <span>·</span> Le retour à soi
           </div>
         </div>
 
