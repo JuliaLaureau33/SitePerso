@@ -297,30 +297,42 @@ export default function Home() {
         <div className="temoignages-header" data-reveal>
           <div className="section-label">Les retours</div>
           <h2 className="temoignages-title">Ce qu’ils en disent</h2>
+          <p className="temoignages-rating">
+            <span className="temoignages-stars" aria-hidden="true">★★★★★</span>
+            4,9 / 5 · 13 avis Google
+          </p>
         </div>
 
         <div className="temoignages-grid">
           <figure className="temoignage-card" data-reveal>
             <blockquote>
-              « J’ai compris en une séance ce que je répétais depuis des années sans le voir. »
+              « Une séance inoubliable. Avec sa douceur, son écoute active et respectueuse,
+              Julia sait détecter vos blessures et enclencher le travail qu’il faut faire pour
+              les guérir. Une mise en lumière bienveillante. »
             </blockquote>
-            <figcaption>— Prénom</figcaption>
+            <div className="temoignage-stars" aria-hidden="true">★★★★★</div>
+            <figcaption>— Lénaick L. <span className="temoignage-src">· Avis Google</span></figcaption>
           </figure>
 
           <figure className="temoignage-card" data-reveal style={{ "--reveal-delay": "0.1s" } as React.CSSProperties}>
             <blockquote>
-              « Julia a cette capacité rare à mettre des mots sur ce qui était confus à
-              l’intérieur. »
+              « J’ai suivi tout un programme avec Julia, de l’amour de soi au déconditionnement.
+              Ensemble, nous avons débloqué plein de choses que je ne soupçonnais même pas.
+              Grâce à elle, j’ai compris mes blessures et je continue d’apprendre chaque jour
+              sur moi. »
             </blockquote>
-            <figcaption>— Prénom</figcaption>
+            <div className="temoignage-stars" aria-hidden="true">★★★★★</div>
+            <figcaption>— Christine B. <span className="temoignage-src">· Avis Google</span></figcaption>
           </figure>
 
           <figure className="temoignage-card" data-reveal style={{ "--reveal-delay": "0.2s" } as React.CSSProperties}>
             <blockquote>
-              « Je suis repartie avec une compréhension nouvelle de moi-même, mais surtout avec
-              une sensation d’apaisement. »
+              « Juste WOW ! Un grand merci à Julia pour son écoute, sa patience et sa
+              bienveillance. Elle utilise bon nombre d’outils de qualité et est une
+              professionnelle très complète. Je recommande les yeux fermés ! »
             </blockquote>
-            <figcaption>— Prénom</figcaption>
+            <div className="temoignage-stars" aria-hidden="true">★★★★★</div>
+            <figcaption>— Laura L. <span className="temoignage-src">· Avis Google</span></figcaption>
           </figure>
         </div>
       </section>

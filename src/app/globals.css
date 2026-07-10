@@ -1088,6 +1088,34 @@ section[id] { scroll-margin-top: 110px; }
   color: var(--ink);
 }
 
+.temoignages-rating {
+  margin-top: 18px;
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.temoignages-rating .temoignages-stars {
+  color: var(--gold-light);
+  letter-spacing: 0.15em;
+  margin-right: 10px;
+}
+
+.temoignage-stars {
+  color: var(--gold-light);
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  margin-bottom: 12px;
+}
+
+.temoignage-src {
+  color: var(--ink-whisper);
+  font-style: italic;
+  letter-spacing: 0.1em;
+  text-transform: none;
+}
+
 .temoignages-grid {
   max-width: 1150px;
   margin: 0 auto;
@@ -1842,9 +1870,7 @@ section[id] { scroll-margin-top: 110px; }
     width: 80%;
     max-width: 320px;
     height: 100vh;
-    background: rgba(15, 14, 12, 0.97);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: #14120F;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1852,11 +1878,22 @@ section[id] { scroll-margin-top: 110px; }
     transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 80px 40px;
     border-left: 1px solid rgba(212, 168, 94, 0.25);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.6);
     z-index: 105;
   }
 
   .nav-links.open { right: 0; }
-  .nav-links a { font-size: 16px; letter-spacing: 0.18em; }
+  .nav-links a {
+    font-size: 16px;
+    letter-spacing: 0.18em;
+    color: var(--ink);
+    -webkit-text-fill-color: var(--ink);
+  }
+  .nav-links a:hover,
+  .nav-links a:active {
+    color: var(--gold-light);
+    -webkit-text-fill-color: var(--gold-light);
+  }
 
   .hero {
     display: flex;
@@ -2120,7 +2157,10 @@ section[id] { scroll-margin-top: 110px; }
     padding: 12px 0;
   }
 
-  /* Overlay derrière le menu pour fermer en cliquant à côté */
+  /* Overlay derrière le menu pour assombrir la page.
+     z-index 90 : au-dessus du contenu de page (z-index 1) mais SOUS la
+     barre <nav> (z-index 100) — sinon l'overlay recouvre le menu et le
+     rend sombre/flou (nav crée un contexte d'empilement à 100). */
   body:has(.nav-links.open)::before {
     content: '';
     position: fixed;
@@ -2128,7 +2168,7 @@ section[id] { scroll-margin-top: 110px; }
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    z-index: 104;
+    z-index: 90;
     animation: fadeIn 0.4s ease;
   }
 }
